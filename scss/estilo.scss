@@ -20,6 +20,7 @@ $colorBody: #DFC7A3;
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
     }
+
     .subtituloDesktop {
         margin-left: 1%;
         text-align: center;
@@ -27,9 +28,33 @@ $colorBody: #DFC7A3;
         height: 50px;
         opacity: 60%;
         font-size: large;
-        font-family:Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         display: flex;
     }
+
+    .cardDesktop {
+        margin-top: 50px;
+        margin-left: 25px;
+        text-align: center;
+    }
+
+    .portadaDesktop {
+        .portada {
+            height: 280px;
+            width: 228px;
+            object-fit: cover;
+            border: solid;
+        }
+    }
+
+    .botonDesktop {
+        .btn {
+            background-color: green;
+            color: black;
+            font-size: large;
+        }
+    }
+
     header {
         background-color: $colorHeader;
         height: 150px;
@@ -68,12 +93,15 @@ $colorBody: #DFC7A3;
         background-color: $colorBody;
 
         main {
-            width: 100%;
+            width: 99%;
             height: 2000px;
             grid-area: main;
 
-            .carrousel {
-                width: 35%;
+
+            .carrousel1 {
+                width: 1000px;
+                border: solid;
+                margin-left: 25%;
             }
 
             .ofertasInfo {
@@ -135,64 +163,186 @@ $colorBody: #DFC7A3;
 
                     .card--jujutsu {
                         @extend .cardDesktop;
-                        @extend .porDesktop;
-                        @extend .boton;
+                        @extend .botonDesktop;
                         @extend .portadaDesktop;
+                        @extend .botonDesktop;
+
+                        .card-body {
+                            margin-left: 60%;
+                        }
+
                         grid-area: cjujutsu;
                     }
 
                     .card--promised {
                         @extend .cardDesktop;
-                        @extend .porDesktop;
-                        @extend .boton;
+                        @extend .botonDesktop;
                         @extend .portadaDesktop;
+
+                        .card-body {
+                            margin-left: 60%;
+                        }
+
+                        @extend .botonDesktop;
                         grid-area: cpromised;
                     }
 
                     .card--haikyu {
                         @extend .cardDesktop;
-                        @extend .porDesktop;
-                        @extend .boton;
+                        @extend .botonDesktop;
                         @extend .portadaDesktop;
+
+                        .card-body {
+                            margin-left: 60%;
+                        }
+
+                        @extend .botonDesktop;
                         grid-area: chaikyu;
                     }
 
                     .card--tokyog {
                         @extend .cardDesktop;
-                        @extend .porDesktop;
-                        @extend .boton;
+                        @extend .botonDesktop;
                         @extend .portadaDesktop;
+
+                        .card-body {
+                            margin-left: 60%;
+                        }
+
+                        @extend .botonDesktop;
                         grid-area: ctokyog;
                     }
 
                     .card--tokyo {
                         @extend .cardDesktop;
-                        @extend .porDesktop;
-                        @extend .boton;
+                        @extend .botonDesktop;
                         @extend .portadaDesktop;
+                        @extend .botonDesktop;
                         grid-area: ctokyog;
                     }
 
                     .card--tokyo {
                         @extend .cardDesktop;
-                        @extend .porDesktop;
-                        @extend .boton;
+                        @extend .botonDesktop;
                         @extend .portadaDesktop;
+
+                        .card-body {
+                            margin-left: 60%;
+                        }
+
+                        @extend .botonDesktop;
                         grid-area: ctokyo;
                     }
 
                     .card--slam {
                         @extend .cardDesktop;
-                        @extend .porDesktop;
-                        @extend .boton;
+                        @extend .botonDesktop;
                         @extend .portadaDesktop;
+
+                        .card-body {
+                            margin-left: 60%;
+                        }
+
+                        @extend .botonDesktop;
                         grid-area: cslam;
                     }
                 }
             }
         }
+
+        .main--sesion {
+            .contenedor--sesion {
+                border: solid;
+                margin-left: 40%;
+                margin-top: 10%;
+                width: 500px;
+                height: 300px;
+            }
+        }
+
+            .main--compra {
+                .contenedor--compra {
+                    margin: auto;
+                    width: 90%;
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+                    grid-template-rows: 3fr auto;
+                    grid-template-areas:
+                        "uno dos"
+                        "tres tres"
+                    ;
+
+                    .uno {
+                        grid-area: uno;
+                        margin-left: 200px;
+                    }
+
+                    .dos {
+                        grid-area: dos;
+                    }
+
+                    .tres {
+                        grid-area: tres;
+                        .prueba{
+                            text-align: center;
+                        }
+                    }
+                    .aside{
+                        .temporal{
+                            color: rgb(168, 167, 167);
+                        }
+                        .detalles--de--compra{
+                            .boton--carrito{
+                            .buton{
+                                background-color: rgb(207, 162, 79);
+                                border-radius: 10%;
+                                text-align: center;
+                                text-decoration: none;
+                                text-decoration:underline;
+                                color: black;
+                                &:hover {
+                                    opacity: .5;
+                                }
+                            }
+                        }
+                        }
+                    }
+                }
+            }
+        }
     }
-}
+
+    footer {
+        background-color: $colorHeader;
+
+        .contenedorFooter {
+            display: flex;
+            align-content: center;
+            width: 700px;
+            margin-left: 32%;
+            justify-content: space-between;
+
+            .fb {
+                &:hover {
+                    opacity: .5;
+                }
+            }
+
+            .ig {
+                &:hover {
+                    opacity: .5;
+                }
+            }
+
+            .tw {
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+
+
 
 @media screen and (max-width:320px) {
     .titulo {
@@ -205,8 +355,8 @@ $colorBody: #DFC7A3;
         font-size: large;
         font-family: Arial, Helvetica, sans-serif;
     }
-    
-    
+
+
     .subtitulo {
         margin-left: 20%;
         text-align: center;
@@ -216,24 +366,28 @@ $colorBody: #DFC7A3;
         font-size: large;
         font-family: Arial, Helvetica, sans-serif;
     }
-    
-    
+
+
     .cards {
         margin-top: 50px;
         margin-left: 25px;
         text-align: center;
     }
-    
-    .port.portada {
-        height: 180px;
-        width: 128px;
-        object-fit: cover;
+
+    .port {
+        .portada {
+            height: 180px;
+            width: 128px;
+            object-fit: cover;
+        }
     }
+
     .boton {
         background-color: green;
         color: black;
         font-size: large;
     }
+
     header {
         background-color: $colorHeader ;
         width: 320px;
@@ -273,68 +427,131 @@ $colorBody: #DFC7A3;
         }
     }
 
-.navbar {
-    background-color: $colorNav;
-    width: 320px;
-    grid-area: nav;
-}
-
-body {
-    width: 320px;
-    background-color: $colorBody;
-
-    main {
-        background-color: $colorBody;
-        grid-area: main;
-        height: 1800px;
+    .navbar {
+        background-color: $colorNav;
         width: 320px;
+        grid-area: nav;
+    }
 
-        .ofertasInfo {
-            display: flex;
-            flex-direction: column;
-            margin: 1px;
-        
-            .titulo--envio {
-                @extend .titulo;
-                grid-area: tenvio;
+    body {
+        width: 320px;
+        background-color: $colorBody;
+
+        main {
+            background-color: $colorBody;
+            grid-area: main;
+            height: 1800px;
+            width: 320px;
+
+            .ofertasInfo {
+                display: flex;
+                flex-direction: column;
+                margin: 1px;
+
+                .titulo--envio {
+                    @extend .titulo;
+                    grid-area: tenvio;
+                }
+
+                .titulo--compra {
+                    @extend .titulo;
+                    grid-area: tcompra;
+                }
+
+                .titulo--descuento {
+                    @extend .titulo;
+                    grid-area: tdescuento;
+                }
+
+                .subtitulo--envio {
+                    @extend .subtitulo;
+                    grid-area: senvio;
+                }
+
+                .subtitulo--compra {
+                    @extend .subtitulo;
+                    grid-area: scompra;
+                }
+
+                .subtitulo--descuento {
+                    @extend .subtitulo;
+                    grid-area: sdescuento;
+                }
             }
 
-            .titulo--compra {
-                @extend .titulo;
-                grid-area: tcompra;
+            .novedades {
+                text-align: center;
+                margin-top: 30px;
+                text-decoration: overline;
+                font-family: Arial, Helvetica, sans-serif;
             }
 
-            .titulo--descuento {
-                @extend .titulo;
-                grid-area: tdescuento;
-            }
+            .mangas {
+                display: flex;
 
-            .subtitulo--envio {
-                @extend .subtitulo;
-                grid-area: senvio;
-            }
+                .card--jujutsu {
+                    @extend .cards;
 
-            .subtitulo--compra {
-                @extend .subtitulo;
-                grid-area: scompra;
-            }
+                    .portada {
+                        @extend .port;
+                    }
 
-            .subtitulo--descuento {
-                @extend .subtitulo;
-                grid-area: sdescuento;
-            }
-        }
+                    .btn {
+                        @extend .boton;
+                    }
+                }
 
-        .novedades {
-            text-align: center;
-            margin-top: 30px;
-            text-decoration: overline;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+                .card--promised {
+                    @extend .cards;
 
-        .mangas {
-            .card--jujutsu {
-                @extend .cards;
+                    .portada {
+                        @extend .port;
+                    }
+
+                    .btn {
+                        @extend .boton;
+                    }
+                }
+
+                .card--haikyu {
+                    @extend .cards;
+
+                    .portada {
+                        @extend .port;
+                    }
+
+                    .btn {
+                        @extend .boton;
+                    }
+                }
+
+                .card--tokyog {
+                    @extend .cards;
+
+                    .portada {
+                        @extend .port;
+                    }
+
+                    .btn {
+                        @extend .boton;
+                    }
+                }
+
+                .card--tokyo {
+                    @extend .cards;
+
+                    .portada {
+                        @extend .port;
+                    }
+
+                    .btn {
+                        @extend .boton;
+                    }
+                }
+
+                .card--slam {
+                    @extend .cards;
+                }
 
                 .portada {
                     @extend .port;
@@ -345,72 +562,22 @@ body {
                 }
             }
 
-            .card--promised {
-                @extend .cards;
-
-                .portada {
-                    @extend .port;
-                }
-
-                .btn {
-                    @extend .boton;
-                }
+            .main--sesion {
+                height: 500px;
             }
 
-            .card--haikyu {
-                @extend .cards;
-
-                .portada {
-                    @extend .port;
-                }
-
-                .btn {
-                    @extend .boton;
-                }
-            }
-
-            .card--tokyog {
-                @extend .cards;
-
-                .portada {
-                    @extend .port;
-                }
-
-                .btn {
-                    @extend .boton;
-                }
-            }
-
-            .card--tokyo {
-                @extend .cards;
-
-                .portada {
-                    @extend .port;
-                }
-
-                .btn {
-                    @extend .boton;
-                }
-            }
-
-            .card--slam {
-                @extend .cards;
-            }
-                .portada {
-                    @extend .port;
-                }
-
-                .btn {
-                    @extend .boton;
-                }
-            }
-
-        .main--sesion {
-            height: 500px;
-        }
             .contenedor--sesion {
                 margin-top: 50px;
+            }
+        }
+    }
+    .body--venta{
+        width: 320px;
+        .main--compra{
+            .contenedor--compra{
+                width: 2000px;
+            }
         }
     }
 
-    
+}

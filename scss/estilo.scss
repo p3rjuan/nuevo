@@ -8,250 +8,6 @@ $colorHeader: #D37A47;
 $colorNav: #C26F41;
 $colorBody: #DFC7A3;
 
-.titulo {
-    text-decoration: underline;
-    margin-left: 20%;
-    text-align: center;
-    width: 200px;
-    height: 50px;
-    color: black;
-    font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.subtitulo {
-    margin-left: 20%;
-    text-align: center;
-    width: 200px;
-    height: 50px;
-    opacity: 60%;
-    font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.cards {
-    margin-top: 50px;
-    margin-left: 25px;
-    text-align: center;
-}
-
-.cardDesktop {
-    margin-top: 50px;
-    margin-left: 25px;
-    text-align: center;
-}
-
-.port.portada {
-    height: 180px;
-    width: 128px;
-    object-fit: cover;
-}
-
-.porDesktop {
-    height: 200px;
-    width: 128px;
-    object-fit: cover;
-}
-.portadaDesktop{
-    height: 280px;
-    width: 228px;
-    object-fit: cover;
-    border: solid;
-  }
-
-.boton {
-    background-color: green;
-    color: black;
-    font-size: large;
-}
-
-@media screen and (max-width:320px) {
-    header {
-        background-color: $colorHeader ;
-        width: 320px;
-        align-items: center;
-        font-family: Arial, Helvetica, sans-serif;
-        display: flex;
-        flex-direction: column;
-        color: white;
-        grid-area: header;
-
-        .contenedor {
-            align-items: center;
-            justify-content: center;
-            display: flex;
-            flex-direction: column;
-
-            .header--logo {
-                width: min-content;
-                height: min-content;
-            }
-
-            .header--inicio {
-                height: min-content;
-                padding: 0;
-                margin: 0;
-                text-decoration: none;
-                color: white;
-            }
-
-            .header--carrito {
-                height: min-content;
-                padding: 0;
-                margin: 0;
-                text-decoration: none;
-                color: white;
-            }
-        }
-    }
-}
-
-.navbar {
-    background-color: $colorNav;
-    width: 320px;
-    grid-area: nav;
-}
-
-body {
-    width: 320px;
-    background-color: $colorBody;
-
-    main {
-        background-color: $colorBody;
-        grid-area: main;
-        height: 1800px;
-        width: 320px;
-
-        .ofertasInfo {
-            display: flex;
-            flex-direction: column;
-            margin: 1px;
-
-            .titulo--envio {
-                @extend .titulo;
-                grid-area: tenvio;
-            }
-
-            .titulo--compra {
-                @extend .titulo;
-                grid-area: tcompra;
-            }
-
-            .titulo--descuento {
-                @extend .titulo;
-                grid-area: tdescuento;
-            }
-
-            .subtitulo--envio {
-                @extend .subtitulo;
-                grid-area: senvio;
-            }
-
-            .subtitulo--compra {
-                @extend .subtitulo;
-                grid-area: scompra;
-            }
-
-            .subtitulo--descuento {
-                @extend .subtitulo;
-                grid-area: sdescuento;
-            }
-        }
-
-        .novedades {
-            text-align: center;
-            margin-top: 30px;
-            text-decoration: overline;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .mangas {
-            .card--jujutsu {
-                @extend .cards;
-
-                .portada {
-                    @extend .port;
-                }
-
-                .btn {
-                    @extend .boton;
-                }
-            }
-
-            .card--promised {
-                @extend .cards;
-
-                .portada {
-                    @extend .port;
-                }
-
-                .btn {
-                    @extend .boton;
-                }
-            }
-
-            .card--haikyu {
-                @extend .cards;
-
-                .portada {
-                    @extend .port;
-                }
-
-                .btn {
-                    @extend .boton;
-                }
-            }
-
-            .card--tokyog {
-                @extend .cards;
-
-                .portada {
-                    @extend .port;
-                }
-
-                .btn {
-                    @extend .boton;
-                }
-            }
-
-            .card--tokyo {
-                @extend .cards;
-
-                .portada {
-                    @extend .port;
-                }
-
-                .btn {
-                    @extend .boton;
-                }
-            }
-
-            .card--slam {
-                @extend .cards;
-
-                .portada {
-                    @extend .port;
-                }
-
-                .btn {
-                    @extend .boton;
-                }
-            }
-
-        }
-    }
-
-    .main--sesion {
-        height: 500px;
-
-        .contenedor--sesion {
-            margin-top: 50px;
-        }
-    }
-}
-
 @media screen and (min-width:321px) {
     .tituloD {
         text-decoration: underline;
@@ -437,3 +193,224 @@ body {
         }
     }
 }
+
+@media screen and (max-width:320px) {
+    .titulo {
+        text-decoration: underline;
+        margin-left: 20%;
+        text-align: center;
+        width: 200px;
+        height: 50px;
+        color: black;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    
+    .subtitulo {
+        margin-left: 20%;
+        text-align: center;
+        width: 200px;
+        height: 50px;
+        opacity: 60%;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    
+    .cards {
+        margin-top: 50px;
+        margin-left: 25px;
+        text-align: center;
+    }
+    
+    .port.portada {
+        height: 180px;
+        width: 128px;
+        object-fit: cover;
+    }
+    .boton {
+        background-color: green;
+        color: black;
+        font-size: large;
+    }
+    header {
+        background-color: $colorHeader ;
+        width: 320px;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        grid-area: header;
+
+        .contenedor {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+
+            .header--logo {
+                width: min-content;
+                height: min-content;
+            }
+
+            .header--inicio {
+                height: min-content;
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+                color: white;
+            }
+
+            .header--carrito {
+                height: min-content;
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+
+.navbar {
+    background-color: $colorNav;
+    width: 320px;
+    grid-area: nav;
+}
+
+body {
+    width: 320px;
+    background-color: $colorBody;
+
+    main {
+        background-color: $colorBody;
+        grid-area: main;
+        height: 1800px;
+        width: 320px;
+
+        .ofertasInfo {
+            display: flex;
+            flex-direction: column;
+            margin: 1px;
+        
+            .titulo--envio {
+                @extend .titulo;
+                grid-area: tenvio;
+            }
+
+            .titulo--compra {
+                @extend .titulo;
+                grid-area: tcompra;
+            }
+
+            .titulo--descuento {
+                @extend .titulo;
+                grid-area: tdescuento;
+            }
+
+            .subtitulo--envio {
+                @extend .subtitulo;
+                grid-area: senvio;
+            }
+
+            .subtitulo--compra {
+                @extend .subtitulo;
+                grid-area: scompra;
+            }
+
+            .subtitulo--descuento {
+                @extend .subtitulo;
+                grid-area: sdescuento;
+            }
+        }
+
+        .novedades {
+            text-align: center;
+            margin-top: 30px;
+            text-decoration: overline;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .mangas {
+            .card--jujutsu {
+                @extend .cards;
+
+                .portada {
+                    @extend .port;
+                }
+
+                .btn {
+                    @extend .boton;
+                }
+            }
+
+            .card--promised {
+                @extend .cards;
+
+                .portada {
+                    @extend .port;
+                }
+
+                .btn {
+                    @extend .boton;
+                }
+            }
+
+            .card--haikyu {
+                @extend .cards;
+
+                .portada {
+                    @extend .port;
+                }
+
+                .btn {
+                    @extend .boton;
+                }
+            }
+
+            .card--tokyog {
+                @extend .cards;
+
+                .portada {
+                    @extend .port;
+                }
+
+                .btn {
+                    @extend .boton;
+                }
+            }
+
+            .card--tokyo {
+                @extend .cards;
+
+                .portada {
+                    @extend .port;
+                }
+
+                .btn {
+                    @extend .boton;
+                }
+            }
+
+            .card--slam {
+                @extend .cards;
+            }
+                .portada {
+                    @extend .port;
+                }
+
+                .btn {
+                    @extend .boton;
+                }
+            }
+
+        .main--sesion {
+            height: 500px;
+        }
+            .contenedor--sesion {
+                margin-top: 50px;
+        }
+    }
+
+    
